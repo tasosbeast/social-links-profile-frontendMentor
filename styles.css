@@ -213,6 +213,7 @@ main {
   overflow: hidden;
   border-radius: var(--border-circle);
   width: 88px;
+  height: 88px;
   margin: 0 auto;
 }
 
