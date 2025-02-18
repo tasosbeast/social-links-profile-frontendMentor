@@ -95,6 +95,10 @@ body {
   color: var(--white);
   font-family: var(--ff);
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Set shorter line heights on headings and interactive elements */
