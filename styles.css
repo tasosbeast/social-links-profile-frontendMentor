@@ -1,0 +1,240 @@
+@font-face {
+  font-family: "Inter"; /* Change this to the font name you want */
+  src: url(./assets/fonts/static/Inter-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Inter"; /* Change this to the font name you want */
+  src: url(./assets/fonts/static/Inter-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Inter"; /* Change this to the font name you want */
+  src: url(./assets/fonts/static/Inter-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+}
+
+:root {
+  /* colors */
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+
+  /* font sizes */
+  --fs-p: 0.875rem;
+
+  /* font family */
+  --ff: "Inter", sans-serif;
+
+  /* font weights */
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* spacing */
+  --spacing-50: 0.25rem;
+  --spacing-100: 0.5rem;
+  --spacing-150: 0.75rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-500: 2.5rem;
+
+  /* border radius */
+  --border-radius: 12px;
+  --border-radius-sm: 8px;
+  --border-circle: 50%;
+
+  /* box shadow */
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  background-color: var(--grey-900);
+  color: var(--white);
+  font-family: var(--ff);
+  padding: 20px;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Utility classes */
+
+/* Text */
+
+.text-center {
+  text-align: center;
+}
+
+.text-title {
+  font-family: var(--ff);
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: var(--fw-bold);
+}
+
+.text-p-regular {
+  font-family: var(--ff);
+  font-size: var(--fs-p);
+  line-height: 1.5;
+  font-weight: var(--fw-regular);
+}
+
+.text-p-bold {
+  font-family: var(--ff);
+  font-size: var(--fs-p);
+  line-height: 1.5;
+  font-weight: var(--fw-bold);
+}
+
+.btn {
+  width: 304px;
+  padding: var(--spacing-150);
+  border-radius: var(--border-radius-sm);
+  transition: all 0.3s;
+  background-color: var(--grey-700);
+}
+
+.btn:hover {
+  background-color: var(--green);
+  color: var(--grey-700);
+}
+
+/* Layout */
+main {
+  flex: 1;
+  margin-bottom: var(--spacing-500);
+}
+
+.card {
+  max-width: 24rem;
+  min-width: 20.438rem;
+  padding: var(--spacing-500);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  background-color: var(--grey-800);
+  text-align: center;
+  margin: 0px auto;
+}
+
+/* Components */
+
+.image__wrapper {
+  overflow: hidden;
+  border-radius: var(--border-circle);
+  width: 88px;
+  margin: 0 auto;
+}
+
+.info__wrapper {
+  margin: var(--spacing-300) 0px;
+}
+
+.card__address {
+  margin-top: var(--spacing-50);
+  color: var(--green);
+}
+
+.social__wrapper ul {
+  margin-top: var(--spacing-300);
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--spacing-200);
+}
+
+ul li a {
+  display: block;
+}
