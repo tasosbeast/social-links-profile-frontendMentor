@@ -197,7 +197,10 @@ textarea:not([rows]) {
 /* Layout */
 main {
   flex: 1;
-  margin-bottom: var(--spacing-500);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .card {
@@ -242,4 +245,9 @@ main {
 
 ul li a {
   display: block;
+}
+
+footer {
+  margin-top: var(--spacing-500);
+  text-align: center;
 }
